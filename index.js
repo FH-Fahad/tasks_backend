@@ -12,7 +12,7 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: "*",
+    origin: "https://tasks-frontend-eight.vercel.app/",
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
   })
 );
