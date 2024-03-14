@@ -28,15 +28,6 @@ const getTask = async (req, res) => {
 const createTask = async (req, res) => {
   const { title, description, completed, endDate } = req.body;
 
-  let emplyFields = [];
-
-  if (!title) {
-    emplyFields.push("Title");
-  }
-  if (emplyFields.length > 0) {
-    return res.status(400).json({ message: `Title field is required` });
-  }
-
   try {
     const user_id = req.user._id;
 
